@@ -1,0 +1,32 @@
+server:
+  port: 9011
+
+spring:
+  application:
+    name: program-manager
+
+jwt:
+  config:
+    key: xszx
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+
+  instance:
+    prefer-ip-address: true
+
+zuul:
+  routes:
+    program-article: #文章
+      path: /article/** #配置请求URL的请求规则
+      serviceId: program-article #指定Eureka注册中心中的服务id
+    program-base: #基础
+      path: /base/** #配置请求URL的请求规则
+      serviceId: program-base #指定Eureka注册中心中的服务id
+    program-user: #用户
+      path: /user/** #配置请求URL的请求规则
+      serviceId: program-user #指定Eureka注册中心中的服务id
+
+
