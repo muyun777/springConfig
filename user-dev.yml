@@ -6,7 +6,7 @@ spring:
     name: program-user
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.149.132:3306/program_user?characterEncoding=utf-8
+    url: jdbc:mysql://192.168.1.106:3306/program_user?characterEncoding=utf-8
     username: root
     password: root
 
@@ -15,11 +15,11 @@ spring:
     show-sql: true
 
   redis:
-    host: 192.168.149.132
+    host: 192.168.1.106
     port: 6379
 
   rabbitmq:
-    host: 192.168.149.132
+    host: 192.168.1.106
 
 jwt:
   config:
